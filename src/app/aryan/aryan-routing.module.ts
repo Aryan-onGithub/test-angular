@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { BaapComponent } from '../baap/baap.component';
 
 const routes: Routes = [
   {
-    path:'',
-    loadChildren: () => import('./aryan/aryan.module').then((m) => m.AryanModule)
+    path:'', component:BaapComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AryanRoutingModule { }
