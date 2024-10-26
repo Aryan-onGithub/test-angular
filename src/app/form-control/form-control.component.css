@@ -1,0 +1,19 @@
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+}
+
+input{
+    margin: 5px;
+    padding: 5px;
+}
+
+button{
+    margin-top: 5px;
+    max-width: 20%;
+    align-self: center;
+}
+button:disabled{
+    background-color: red;
+}

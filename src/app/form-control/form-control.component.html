@@ -1,0 +1,17 @@
+<p>form-control works!</p>
+<form [formGroup]="signup">
+    <h3>Sign Up</h3>
+
+    <input type="text" placeholder="Enter your name" formControlName="name" >
+    
+    
+    <input type="email" placeholder="Enter your email" formControlName="email" >
+    @if(signup.controls['email'].touched){
+        @if(signup.controls['email'].invalid){
+            <p>email is invalid</p>
+        }
+    }
+    {{error}}   
+
+    <button [disabled]="signup.invalid" (click)="print()">submit</button>
+</form>
